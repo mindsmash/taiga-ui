@@ -1,9 +1,9 @@
 @import 'taiga-ui-local';
 
-@padding: 12px;
+@padding: 8px;
 
 :host {
-    .text-body-s(2);
+    .text-caption-bold();
     .transition(background-color);
     position: relative;
     display: inline-flex;
@@ -11,7 +11,7 @@
     justify-content: center;
     box-sizing: border-box;
     color: var(--tui-base-01);
-    border-radius: 100px;
+    border-radius: var(--tui-radius);
     white-space: nowrap;
     overflow: hidden;
 
@@ -187,7 +187,6 @@
     }
 
     &[data-tui-host-size='s'] {
-        .text-body-xs();
         height: @height-extra-extra-small;
         line-height: @height-extra-extra-small;
         min-width: @height-extra-extra-small;

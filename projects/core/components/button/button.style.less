@@ -2,12 +2,13 @@
 
 @padding-xs: 8px;
 @padding-s: 12px;
-@padding-m: 24px;
-@padding-l: 36px;
-@padding-xl: 40px;
+@padding-m: 16px;
+@padding-l: 24px;
+@padding-xl: 32px;
 @icon-margin: 8px;
-@font-size-large: 15px;
-@font-size-extra-large: 17px;
+@font-size-small: 0.875rem;
+@font-size-medium: 1rem;
+@font-size-large: 1.125rem;
 
 :host {
     .clearbtn();
@@ -19,7 +20,6 @@
     border-radius: var(--tui-radius);
     user-select: none;
     text-decoration: none;
-    font-weight: bold;
     outline: none;
 
     &[disabled] {
@@ -37,7 +37,7 @@
 
     &[data-tui-host-size='xs'] {
         height: @height-extra-small;
-        font-weight: normal;
+        font-size: @font-size-small;
 
         &[data-tui-host-shape='square'],
         &[tuiIconButton] {
@@ -48,7 +48,7 @@
 
     &[data-tui-host-size='s'] {
         height: @height-small;
-        font-weight: normal;
+        font-size: @font-size-small;
 
         &[data-tui-host-shape='square'],
         &[tuiIconButton] {
@@ -58,6 +58,17 @@
     }
 
     &[data-tui-host-size='m'] {
+        height: @height-medium;
+        font-size: @font-size-medium;
+
+        &[data-tui-host-shape='square'],
+        &[tuiIconButton] {
+            height: @height-medium;
+            width: @height-medium;
+        }
+    }
+
+    &[data-tui-host-size='l'] {
         height: @height-large;
         font-size: @font-size-large;
 
@@ -68,7 +79,7 @@
         }
     }
 
-    &[data-tui-host-size='l'] {
+    &[data-tui-host-size='xl'] {
         height: @height-extra-large;
         font-size: @font-size-large;
 
@@ -76,17 +87,6 @@
         &[tuiIconButton] {
             height: @height-extra-large;
             width: @height-extra-large;
-        }
-    }
-
-    &[data-tui-host-size='xl'] {
-        height: @height-extra-extra-large;
-        font-size: @font-size-large;
-
-        &[data-tui-host-shape='square'],
-        &[tuiIconButton] {
-            height: @height-extra-extra-large;
-            width: @height-extra-extra-large;
         }
     }
 }

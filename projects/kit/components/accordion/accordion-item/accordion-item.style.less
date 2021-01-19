@@ -73,14 +73,14 @@
 }
 
 .header {
-    .text-body-l();
+    .text-body-m();
     .transition(background);
     display: flex;
     align-items: center;
     box-sizing: border-box;
     border-bottom: 1px solid var(--tui-base-05);
-    min-height: @height-extra-large;
-    padding: 12px 20px;
+    min-height: 44px + 1px; // border compensation
+    padding: 12px 16px;
     color: var(--tui-text-01);
     cursor: pointer;
 
@@ -117,9 +117,9 @@
     }
 
     :host[data-tui-host-size='s'] & {
-        .text-body-m();
-        min-height: @height-large;
-        padding: 10px 12px 10px 16px;
+        .text-body-s();
+        min-height: 32px + 1px; // border compensation
+        padding: 8px 12px;
     }
 
     :host._no-padding & {
@@ -144,13 +144,18 @@
 
 .icon {
     .transition(~'transform, color');
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     margin-left: auto;
     color: var(--tui-base-06);
 
     &_open {
         transform: rotate(180deg);
+    }
+
+    :host[data-tui-host-size='s'] & {
+        width: 16px;
+        height: 16px;
     }
 
     :host[data-tui-host-mode] & {
@@ -176,11 +181,11 @@
 
 .content {
     .text-body-m();
-    padding: 20px;
+    padding: 12px 16px;
     word-wrap: break-word;
 
     :host[data-tui-host-size='s'] & {
         .text-body-s();
-        padding: 16px;
+        padding: 8px 12px;
     }
 }

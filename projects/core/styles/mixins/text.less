@@ -1,44 +1,44 @@
 .text-basic() {
-    .text-body-s();
+    .text-body-m();
     color: var(--tui-text-01);
 }
 
 //headings
 .text-h1() {
-    .font_heading(50px, 56px);
-}
-
-.text-h2() {
-    .font_heading(40px, 44px);
-}
-
-.text-h3() {
-    .font_heading(30px, 36px);
-}
-
-.text-h4() {
     .font_heading(28px, 32px);
 }
 
-.text-h5() {
+.text-h2() {
     .font_heading(24px, 28px);
 }
 
-.text-h6() {
+.text-h3() {
     .font_heading(20px, 24px);
+}
+
+.text-h4() {
+    .font_heading(18px, 24px);
+}
+
+.text-h5() {
+    .font_heading(16px, 20px);
+}
+
+.text-h6() {
+    .font_heading(14px, 16px);
 }
 
 //typed text
 .text-body-xl-bold() {
-    .font(19px, 28px, bold);
+    .font(20px, 24px, bold);
 }
 
 .text-body-xl() {
-    .font(19px, 28px, normal);
+    .font(20px, 24px, normal);
 }
 
 .text-body-l-bold(@type: 1) {
-    .font(17px, 24px, bold);
+    .font(18px, 24px, bold);
 
     & when (@type = 2) {
         line-height: 20px;
@@ -50,7 +50,7 @@
 }
 
 .text-body-l(@type: 1) {
-    .font(17px, 24px, normal);
+    .font(18px, 24px, normal);
 
     & when (@type = 2) {
         line-height: 20px;
@@ -62,23 +62,23 @@
 }
 
 .text-body-m-bold(@type: 1) {
-    .font(15px, 24px, bold);
+    .font(15px, 20px, bold);
 
     & when (@type = 2) {
-        line-height: 20px;
+        line-height: 16px;
     }
 }
 
 .text-body-m(@type: 1) {
-    .font(15px, 24px, normal);
+    .font(15px, 20px, normal);
 
     & when (@type = 2) {
-        line-height: 20px;
+        line-height: 16px;
     }
 }
 
 .text-body-s-bold(@type: 1) {
-    .font(13px, 20px, bold);
+    .font(14px, 16px, bold);
 
     & when (@type = 2) {
         line-height: 16px;
@@ -86,7 +86,7 @@
 }
 
 .text-body-s(@type: 1) {
-    .font(13px, 20px, normal);
+    .font(14px, 16px, normal);
 
     & when (@type = 2) {
         line-height: 16px;
@@ -94,37 +94,36 @@
 }
 
 .text-body-xs() {
-    .font(11px, 16px, normal);
-    letter-spacing: 0.4px;
+    .font(12px, 16px, normal);
 }
 
-//tabs,tags, category
+//tabs, tags, category
 
 .text-caption-l-bold() {
-    .font(13px, 20px, bold);
-    letter-spacing: 1px;
+    .font(14px, 16px, bold);
+    letter-spacing: 0.05em;
     text-transform: uppercase;
 }
 
 .text-caption-l() {
-    .font(13px, 20px, normal);
-    letter-spacing: 1px;
+    .font(14px, 16px, normal);
+    letter-spacing: 0.05em;
     text-transform: uppercase;
 }
 
 .text-caption-bold() {
-    .font(11px, 16px, bold);
-    letter-spacing: 1px;
+    .font(12px, 14px, bold);
+    letter-spacing: 0.05em;
     text-transform: uppercase;
 }
 
 .text-caption() {
-    .font(11px, 16px, normal);
-    letter-spacing: 1px;
+    .font(12px, 14px, normal);
+    letter-spacing: 0.05em;
     text-transform: uppercase;
 }
 
-// mixins fot font properties
+// mixins for font properties
 .font(@size, @line-height: 'none', @weight: normal, @color: 'none') {
     font-weight: @weight;
     font-size: @size;
