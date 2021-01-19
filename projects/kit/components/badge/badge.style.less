@@ -167,14 +167,14 @@
     }
 
     &[data-tui-host-padding='m'] {
-        padding: 0 @padding - 4px;
+        padding: 0 @padding;
 
         &[data-tui-host-size='s'] {
-            padding: 0 @padding - 6px;
+            padding: 0 @padding - 4px;
         }
 
         &[data-tui-host-size='l'] {
-            padding: 0 @padding - 2px;
+            padding: 0 @padding + 4px;
         }
     }
 
@@ -182,7 +182,11 @@
         padding: 0 @padding;
 
         &[data-tui-host-size='s'] {
-            padding: 0 @padding - 2px;
+            padding: 0 @padding - 4px;
+        }
+
+        &[data-tui-host-size='l'] {
+            padding: 0 @padding + 4px;
         }
     }
 
@@ -207,7 +211,7 @@
     &:before {
         display: block;
         background: currentColor;
-        margin: 0 6px 0 -2px;
+        margin: 0 4px 0 2px;
         width: 6px;
         height: 6px;
         border-radius: 100%;
@@ -218,7 +222,7 @@
         }
 
         :host[data-tui-host-size='l'] & {
-            margin: 0 8px 0 0;
+            margin: 0 6px 0 0;
             width: 8px;
             height: 8px;
         }
