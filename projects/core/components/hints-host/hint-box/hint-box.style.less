@@ -1,18 +1,18 @@
 @import '../../../styles/taiga-ui-local.less';
 
-@arrowSize: 8px;
-@arrowOffset: 14px;
-@arrowCompensation: 3.2px; // 8px * 1.4 - 8px
+@arrowSize: 0;
+@arrowOffset: 0;
+@arrowCompensation: 0; // 8px * 1.4 - 8px
 
 :host {
     position: absolute;
     top: 0;
     left: 0;
     max-width: 288px;
-    min-height: @height-large;
-    padding: @space * 3 @space * 4;
-    background: var(--tui-primary);
-    border-radius: var(--tui-radius-xl);
+    min-height: @height-extra-small;
+    padding: @space @space * 2;
+    background: var(--tui-base-09);
+    border-radius: var(--tui-radius);
     color: var(--tui-primary-text);
     box-sizing: border-box;
 
@@ -123,7 +123,7 @@
 }
 
 .tooltip {
-    .text-body-s();
+    .text-body-xs();
     word-wrap: break-word;
 
     :host[data-tui-host-mode='overflow'] & {

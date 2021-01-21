@@ -162,14 +162,19 @@
 
     .tui-island &__footer-button {
         display: block;
-        width: ~'calc(100% + 30px);'; // margin compensation
-        margin: @padding -@padding + 1 -@padding + 1; // 1 is compensations of border
+        width: ~'calc(100% + 46px);'; // margin compensation
+        margin: @padding-large -@padding-large + 1 -@padding-large + 1; // 1 is compensations of border
         border-top: 1px solid var(--tui-base-03);
         border-radius: 0 0 var(--tui-radius-xl) var(--tui-radius-xl);
     }
 
-    .tui-island_size_l &__footer-button {
-        width: ~'calc(100% + 38px);'; // margin compensation
-        margin: @padding-large -@padding-large + 1 -@padding-large + 1; // 1 is compensations of border
+    .tui-island_size_s &__footer-button {
+        width: ~'calc(100% + 14px);'; // margin compensation
+        margin: @padding-small -@padding-small + 1 -@padding-small + 1; // 1 is compensations of border
+    }
+
+    .tui-island_size_m &__footer-button {
+        width: ~'calc(100% + 30px);'; // margin compensation
+        margin: @padding -@padding + 1 -@padding + 1; // 1 is compensations of border
     }
 }
