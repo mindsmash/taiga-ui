@@ -7,7 +7,7 @@
     .text-body-s();
     display: flex;
     border-radius: var(--tui-radius);
-    height: @height-large;
+    height: @height;
     color: var(--tui-text-01);
 
     &._disabled {
@@ -16,7 +16,7 @@
 
     &[data-tui-host-size='l'] {
         .text-body-m();
-        height: @height-extra-large;
+        height: @height-large;
     }
 }
 
@@ -39,8 +39,8 @@
 
 .button {
     && {
-        width: @height-small;
-        height: 21px;
+        width: @height-extra-small;
+        height: @height / 2 - 1; // 1 is compensations of border
 
         &_plus {
             margin-bottom: 2px;
@@ -52,8 +52,8 @@
         }
 
         :host[data-tui-host-size='l'] & {
-            width: @height-medium;
-            height: 27px;
+            width: @height-small;
+            height: @height-large / 2 - 1; // 1 is compensations of border
         }
     }
 }

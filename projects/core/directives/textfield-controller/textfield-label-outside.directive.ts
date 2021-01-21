@@ -17,7 +17,7 @@ export const TUI_TEXTFIELD_LABEL_OUTSIDE = new InjectionToken<TuiTextfieldLabelO
 })
 export class TuiTextfieldLabelOutsideDirective extends Controller {
     @Input('tuiTextfieldLabelOutside')
-    labelOutside = false;
+    labelOutside = true;
 }
 
 export function labelOutsideDirectiveFactory(): TuiTextfieldLabelOutsideDirective {

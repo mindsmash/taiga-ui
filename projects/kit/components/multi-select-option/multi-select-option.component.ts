@@ -22,7 +22,7 @@ export class TuiMultiSelectOptionComponent<T> extends TuiSelectOptionComponent<T
     );
 
     get size(): TuiSizeL {
-        return sizeBigger(this.option.size) ? 'l' : 'm';
+        return sizeBigger(this.option.size) ? 'm' : 'm';
     }
 }
 

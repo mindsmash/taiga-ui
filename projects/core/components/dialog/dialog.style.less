@@ -6,24 +6,23 @@
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    padding: 32px;
+    padding: 24px;
     margin: auto;
     background: var(--tui-base-01);
     background-clip: padding-box;
-    border-radius: 56px;
+    border-radius: 48px;
     border: 40px solid transparent;
 
     &:after {
         .fullsize();
         .shadow(3);
         content: '';
-        border-radius: 16px;
+        border-radius: 8px;
         pointer-events: none;
     }
 
     &[data-size='s'] {
-        width: 480px;
-        padding: 24px;
+        width: 400px;
 
         .heading {
             margin-bottom: 8px;
@@ -31,7 +30,7 @@
     }
 
     &[data-size='m'] {
-        width: 680px;
+        width: 640px;
 
         .heading {
             margin-bottom: 12px;
@@ -39,7 +38,7 @@
     }
 
     &[data-size='l'] {
-        width: 880px;
+        width: 960px;
 
         .heading {
             margin-bottom: 16px;
@@ -74,7 +73,7 @@
             border-radius: 0;
             border: none;
             margin: auto 0 0;
-            padding: 32px 24px;
+            padding: 24px 24px;
 
             &:after {
                 border-radius: 0;
@@ -98,10 +97,10 @@
 
 .header {
     display: flex;
-    margin: -32px -32px 0;
-    padding-bottom: 32px;
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
+    margin: -24px -24px 0;
+    padding-bottom: 24px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     overflow: hidden;
 
     :host[data-size='s'] & {
@@ -118,7 +117,7 @@
     @media @mobile {
         :host[data-size] & {
             margin: -24px -24px 0;
-            padding-bottom: 32px;
+            padding-bottom: 24px;
             border-radius: 0;
         }
 
@@ -135,7 +134,7 @@
 
     @media @mobile {
         height: 24px;
-        margin: -32px -24px 0;
+        margin: -24px -24px 0;
     }
 }
 

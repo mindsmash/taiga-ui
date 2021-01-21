@@ -6,9 +6,9 @@
 @padding-l: 24px;
 @padding-xl: 32px;
 @icon-margin: 8px;
-@font-size-small: 0.875rem;
-@font-size-medium: 1rem;
-@font-size-large: 1.125rem;
+@font-size-small: 14px;
+@font-size-medium: 15px;
+@font-size-large: 18px;
 
 :host {
     .clearbtn();
@@ -48,7 +48,7 @@
 
     &[data-tui-host-size='s'] {
         height: @height-small;
-        font-size: @font-size-small;
+        font-size: @font-size-medium;
 
         &[data-tui-host-shape='square'],
         &[tuiIconButton] {
@@ -70,7 +70,7 @@
 
     &[data-tui-host-size='l'] {
         height: @height-large;
-        font-size: @font-size-large;
+        font-size: @font-size-medium;
 
         &[data-tui-host-shape='square'],
         &[tuiIconButton] {
