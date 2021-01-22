@@ -3,7 +3,7 @@ const {version} = require('../package.json');
 const {createInterface} = require('readline');
 const {execSync} = require('child_process');
 
-const mode = argv.length >= 2 ? argv[2] : 'patch';
+const mode = argv.length >= 2 ? argv[2] : 'prerelease';
 const parsedVersion = version.split('.');
 
 const newVersion = bump(parsedVersion, mode);
@@ -11,7 +11,11 @@ const newVersion = bump(parsedVersion, mode);
 execSync('git checkout main');
 execSync('git pull');
 execSync(`git checkout -b release/${newVersion}`);
-execSync(`npm run release -- --release-as ${mode}`);
+execSync(
+    `npm run release -- ${
+        mode !== 'prerelease' ? '--release-as ' + mode : '--prerelease'
+    }`,
+);
 
 checkChangelog().then(() => {
     execSync('git add .');
@@ -31,7 +35,13 @@ function bump(versionArray, mode) {
     }
 
     if (mode === 'patch') {
-        versionArray[2] = Number(versionArray[2]) + 1;
+        versionArray[2] = Number(versionArray[2].split('-')[0]) + 1;
+    }
+
+    if (mode === 'prerelease') {
+        const patch = Number(versionArray[2].split('-')[0]) + 1;
+        const qualifier = Number(versionArray[2].split('-')[1] || -1) + 1;
+        versionArray[2] = `${patch}-${qualifier}`;
     }
 
     return versionArray.join('.');
