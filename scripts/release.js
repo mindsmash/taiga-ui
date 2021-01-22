@@ -3,7 +3,7 @@ const {version} = require('../package.json');
 const {createInterface} = require('readline');
 const {execSync} = require('child_process');
 
-const mode = argv.length >= 2 ? argv[2] : 'prerelease';
+const mode = argv.length > 2 ? argv[2] : 'prerelease';
 const parsedVersion = version.split('.');
 
 const newVersion = bump(parsedVersion, mode);
