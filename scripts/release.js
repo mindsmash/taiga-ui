@@ -8,7 +8,7 @@ const parsedVersion = version.split('.');
 
 const newVersion = bump(parsedVersion, mode);
 
-execSync('git checkout main');
+execSync('git checkout coyo-ui');
 execSync('git pull');
 execSync(`git checkout -b release/${newVersion}`);
 execSync(
