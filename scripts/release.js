@@ -13,7 +13,7 @@ execSync('git pull');
 execSync(`git checkout -b release/${newVersion}`);
 execSync(
     `npm run release -- ${
-        mode !== 'prerelease' ? '--release-as ' + mode : '--prerelease'
+        mode !== 'prerelease' ? '--release-as ' + mode : '--release-as patch --prerelease'
     }`,
 );
 
