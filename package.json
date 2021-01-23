@@ -1,6 +1,6 @@
 {
     "name": "@taiga-ui/components",
-    "version": "2.1.2",
+    "version": "2.2.1",
     "description": "Taiga UI by Tinkoff is a set of components, services, directives and other tools to build high quality UI using modern Angular framework",
     "scripts": {
         "start": "ng serve",
@@ -29,7 +29,6 @@
         "build:icons": "ng run icons:build --configuration=production",
         "*** Release ***": "",
         "release": "standard-version -a --no-verify",
-        "release:pre": "node scripts/release.js",
         "release:patch": "node scripts/release.js patch",
         "release:minor": "node scripts/release.js minor",
         "release:major": "node scripts/release.js major",
@@ -154,7 +153,7 @@
     },
     "standard-version": {
         "scripts": {
-            "postbump": "node scripts/sync-versions.js && git add **/package.json"
+            "postbump": "node scripts/sync-versions.js && node projects/core/scripts/version.js && git add **/package.json"
         }
     },
     "engines": {

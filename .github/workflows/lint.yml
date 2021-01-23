@@ -1,9 +1,12 @@
 name: Lint all packages of Taiga UI
 
 on:
+  pull_request:
+    branches-ignore:
+      - 'release/**'
   push:
     branches:
-      - 'coyo-ui'
+      - coyo-ui
 
 jobs:
   lint:

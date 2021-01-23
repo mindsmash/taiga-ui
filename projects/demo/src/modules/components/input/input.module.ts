@@ -13,6 +13,7 @@ import {
     TuiHintControllerModule,
     TuiLinkModule,
     TuiModeModule,
+    TuiNotificationModule,
     TuiPrimitiveTextfieldModule,
     TuiSvgModule,
     TuiTableModeModule,
@@ -29,6 +30,7 @@ import {
     TuiSelectModule,
 } from '@taiga-ui/kit';
 import {PolymorpheusModule} from '@tinkoff/ng-polymorpheus';
+import {TextMaskModule} from 'angular2-text-mask';
 import {InheritedDocumentationModule} from '../abstract/inherited-documentation/inherited-documentation.module';
 import {TuiInputExample1} from './examples/1/component';
 import {TuiInputExample2} from './examples/2/component';
@@ -58,6 +60,7 @@ import {ExampleTuiInputComponent} from './input.component';
         TuiModeModule,
         TuiTableModeModule,
         TuiInputDateModule,
+        TuiNotificationModule,
         TuiRepeatTimesModule,
         TuiSvgModule,
         TuiRadioListModule,
@@ -74,6 +77,7 @@ import {ExampleTuiInputComponent} from './input.component';
         PolymorpheusModule,
         ...TUI_DOC_PAGE_MODULES,
         RouterModule.forChild(generateRoutes(ExampleTuiInputComponent)),
+        TextMaskModule,
     ],
     declarations: [
         ExampleTuiInputComponent,

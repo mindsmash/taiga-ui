@@ -3,23 +3,19 @@ const {version} = require('../package.json');
 const {createInterface} = require('readline');
 const {execSync} = require('child_process');
 
-const mode = argv.length > 2 ? argv[2] : 'prerelease';
+const mode = argv.length >= 2 ? argv[2] : 'patch';
 const parsedVersion = version.split('.');
 
 const newVersion = bump(parsedVersion, mode);
 
-execSync('git checkout coyo-ui');
+execSync('git checkout main');
 execSync('git pull');
 execSync(`git checkout -b release/${newVersion}`);
-execSync(
-    `npm run release -- ${
-        mode !== 'prerelease' ? '--release-as ' + mode : '--release-as patch --prerelease'
-    }`,
-);
+execSync(`npm run release -- --release-as ${mode}`);
 
 checkChangelog().then(() => {
     execSync('git add .');
-    execSync('git commit --amend --no-edit');
+    execSync(`git commit -m 'chore(changelog): fix incorrect generated logs'`);
     execSync(`git push --set-upstream origin release/${newVersion}`);
     execSync(`git push --tags`);
 });
@@ -35,13 +31,7 @@ function bump(versionArray, mode) {
     }
 
     if (mode === 'patch') {
-        versionArray[2] = Number(versionArray[2].split('-')[0]) + 1;
-    }
-
-    if (mode === 'prerelease') {
-        const patch = Number(versionArray[2].split('-')[0]) + 1;
-        const qualifier = Number(versionArray[2].split('-')[1] || -1) + 1;
-        versionArray[2] = `${patch}-${qualifier}`;
+        versionArray[2] = Number(versionArray[2]) + 1;
     }
 
     return versionArray.join('.');
