@@ -44,12 +44,12 @@
     }
 
     :host[data-tui-host-size='m'] & {
-        min-height: @height;
+        min-height: var(--tui-height);
         padding: 4px 4px 4px 0;
     }
 
     :host[data-tui-host-size='l'] & {
-        min-height: @height-large;
+        min-height: var(--tui-height-l);
         padding: 6px 4px 6px 0;
     }
 
@@ -89,11 +89,11 @@
     }
 
     :host[data-tui-host-size='m'] & {
-        height: @height;
+        height: var(--tui-height-m);
     }
 
     :host[data-tui-host-size='l'] & {
-        height: @height-large;
+        height: var(--tui-height-l);
     }
 }
 
@@ -104,11 +104,11 @@
     justify-content: center;
 
     :host[data-tui-host-size='m'] & {
-        height: @height;
+        height: var(--tui-height-m);
     }
 
     :host[data-tui-host-size='l'] & {
-        height: @height-large;
+        height: var(--tui-height-l);
     }
 }
 

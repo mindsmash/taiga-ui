@@ -1,14 +1,17 @@
 name: Build all packages of Taiga UI
 
 on:
-  push:
-    branches:
-      - 'coyo-ui'
+  pull_request:
+    branches-ignore:
+      - 'release/**'
     paths-ignore:
       - 'projects/*testing/**'
       - 'projects/demo/**'
       - 'projects/icons/**'
       - '**/*.md'
+  push:
+    branches:
+      - 'coyo-ui'
 
 jobs:
   build:
@@ -23,7 +26,7 @@ jobs:
     - name: Cache Node.js modules
       uses: actions/cache@v2
       with:
-        path: ~/.npm 
+        path: ~/.npm
         key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           ${{ runner.OS }}-node-
@@ -33,6 +36,7 @@ jobs:
     # End of setup
     - run: |
         npm run build cdk
+        npm run build i18n
         npm run build core
         npm run build kit
         npm run build addon-charts
