@@ -6,7 +6,7 @@
 :host {
     .text-body-s();
     display: flex;
-    border-radius: var(--tui-radius);
+    border-radius: var(--tui-radius-m);
     height: var(--tui-height-m);
     color: var(--tui-text-01);
 
@@ -39,21 +39,21 @@
 
 .button {
     && {
-        width: var(--tui-height-xs);
-        height: calc(var(--tui-height-m) / 2 - 1); // 1 is compensations of border
+        width: var(--tui-height-s);
+        height: 21px;
 
         &_plus {
             margin-bottom: 2px;
-            border-radius: 0 var(--tui-radius) 0 0;
+            border-radius: 0 var(--tui-radius-m) 0 0;
         }
 
         &_minus {
-            border-radius: 0 0 var(--tui-radius);
+            border-radius: 0 0 var(--tui-radius-m);
         }
 
         :host[data-tui-host-size='l'] & {
-            width: var(--tui-height-s);
-            height: calc(var(--tui-height-l) / 2 - 1); // 1 is compensations of border
+            width: 40px;
+            height: 27px;
         }
     }
 }

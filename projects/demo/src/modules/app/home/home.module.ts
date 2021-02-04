@@ -1,12 +1,11 @@
 import {NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
 import {TuiDocCodeModule} from '@taiga-ui/addon-doc';
-import {TuiLinkModule} from '@taiga-ui/core';
-import {TuiAccordionModule} from '@taiga-ui/kit';
+import {TuiLinkModule, TuiNotificationModule} from '@taiga-ui/core';
 import {HomeComponent} from './home.component';
 
 @NgModule({
-    imports: [RouterModule, TuiDocCodeModule, TuiLinkModule, TuiAccordionModule],
+    imports: [RouterModule, TuiDocCodeModule, TuiNotificationModule, TuiLinkModule],
     entryComponents: [HomeComponent],
     declarations: [HomeComponent],
     exports: [HomeComponent],

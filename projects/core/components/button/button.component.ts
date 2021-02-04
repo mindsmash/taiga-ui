@@ -92,7 +92,7 @@ export class TuiButtonComponent
                 this.updateHovered(hovered);
             });
         pressedObservable(elementRef.nativeElement)
-            .pipe(takeUntil(destroy$))
+            .pipe(watch(changeDetectorRef), takeUntil(destroy$))
             .subscribe(pressed => {
                 this.updatePressed(pressed);
             });
@@ -110,7 +110,7 @@ export class TuiButtonComponent
     }
 
     get loaderSize(): TuiSizeS {
-        return this.size === 'l' ? 'm' : 's';
+        return this.size === 'l' || this.size === 'xl' ? 'm' : 's';
     }
 
     @HostBinding('attr.disabled')

@@ -4,8 +4,8 @@
     .text-basic();
     position: relative;
     display: block;
-    padding: 16px;
-    border-radius: var(--tui-radius);
+    padding: 13px 16px 11px;
+    border-radius: var(--tui-radius-m);
     background: #fff; // fallback for IE
     background: var(--tui-base-01);
     overflow: hidden;
@@ -26,18 +26,34 @@
 
     &[data-tui-host-status='info'] {
         color: var(--tui-info-fill);
+
+        &:after {
+            background: var(--tui-info-bg);
+        }
     }
 
     &[data-tui-host-status='success'] {
         color: var(--tui-success-fill);
+
+        &:after {
+            background: var(--tui-success-bg);
+        }
     }
 
     &[data-tui-host-status='error'] {
         color: var(--tui-error-fill);
+
+        &:after {
+            background: var(--tui-error-bg);
+        }
     }
 
     &[data-tui-host-status='warning'] {
         color: var(--tui-warning-fill);
+
+        &:after {
+            background: var(--tui-warning-bg);
+        }
     }
 }
 
@@ -53,12 +69,12 @@
     display: flex;
     width: 16px;
     height: 100%;
-    max-height: 52px;
+    max-height: 48px;
     align-items: center;
 }
 
 .close {
     position: absolute;
-    top: 14px;
+    top: 10px;
     right: 8px;
 }

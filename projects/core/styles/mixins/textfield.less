@@ -2,7 +2,7 @@
     .text-basic();
     position: relative;
     display: block;
-    border-radius: var(--tui-radius);
+    border-radius: var(--tui-radius-m);
 
     &[data-tui-host-size='s'] {
         height: var(--tui-height-s);
@@ -272,7 +272,7 @@
         color: var(--tui-text-01);
 
         &_shifted {
-            margin-left: @space;
+            margin-left: 1ch;
         }
 
         :host[data-tui-host-mode='onDark'] & {

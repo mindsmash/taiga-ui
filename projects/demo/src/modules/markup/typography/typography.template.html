@@ -2,7 +2,7 @@
     <ng-template pageTab>
         <h2 i18n class="tui-text_h3 tui-space_bottom-1">Heading</h2>
         <h3 class="tui-text_body-l tui-space_top-0 tui-space_bottom-4">
-            --tui-heading-font
+            --tui-font-heading
         </h3>
         <table class="table">
             <tr>
@@ -19,12 +19,12 @@
                     Taiga UI is a modern UI kit for Angular
                 </td>
                 <td class="td">
-                    <tui-doc-copy (click)="copyCodeExample('.text-h1()')">
+                    <tui-doc-copy [cdkCopyToClipboard]="'.text-h1()'">
                         .text-h1()
                     </tui-doc-copy>
                 </td>
                 <td class="td">
-                    <tui-doc-copy (click)="copyCodeExample('tui-text_h1')">
+                    <tui-doc-copy [cdkCopyToClipboard]="'tui-text_h1'">
                         tui-text_h1
                     </tui-doc-copy>
                 </td>
@@ -38,12 +38,12 @@
                     Taiga UI is a modern UI kit for Angular
                 </td>
                 <td class="td">
-                    <tui-doc-copy (click)="copyCodeExample('.text-h2()')">
+                    <tui-doc-copy [cdkCopyToClipboard]="'.text-h2()'">
                         .text-h2()
                     </tui-doc-copy>
                 </td>
                 <td class="td">
-                    <tui-doc-copy (click)="copyCodeExample('tui-text_h2')">
+                    <tui-doc-copy [cdkCopyToClipboard]="'tui-text_h2'">
                         tui-text_h2
                     </tui-doc-copy>
                 </td>
@@ -57,12 +57,12 @@
                     Taiga UI is a modern UI kit for Angular
                 </td>
                 <td class="td">
-                    <tui-doc-copy (click)="copyCodeExample('.text-h3()')">
+                    <tui-doc-copy [cdkCopyToClipboard]="'.text-h3()'">
                         .text-h3()
                     </tui-doc-copy>
                 </td>
                 <td class="td">
-                    <tui-doc-copy (click)="copyCodeExample('tui-text_h3')">
+                    <tui-doc-copy [cdkCopyToClipboard]="'tui-text_h3'">
                         tui-text_h3
                     </tui-doc-copy>
                 </td>
@@ -76,12 +76,12 @@
                     Taiga UI is a modern UI kit for Angular
                 </td>
                 <td class="td">
-                    <tui-doc-copy (click)="copyCodeExample('.text-h4()')">
+                    <tui-doc-copy [cdkCopyToClipboard]="'.text-h4()'">
                         .text-h4()
                     </tui-doc-copy>
                 </td>
                 <td class="td">
-                    <tui-doc-copy (click)="copyCodeExample('tui-text_h4')">
+                    <tui-doc-copy [cdkCopyToClipboard]="'tui-text_h4'">
                         tui-text_h4
                     </tui-doc-copy>
                 </td>
@@ -95,12 +95,12 @@
                     Taiga UI is a modern UI kit for Angular
                 </td>
                 <td class="td">
-                    <tui-doc-copy (click)="copyCodeExample('.text-h5()')">
+                    <tui-doc-copy [cdkCopyToClipboard]="'.text-h5()'">
                         .text-h5()
                     </tui-doc-copy>
                 </td>
                 <td class="td">
-                    <tui-doc-copy (click)="copyCodeExample('tui-text_h5')">
+                    <tui-doc-copy [cdkCopyToClipboard]="'tui-text_h5'">
                         tui-text_h5
                     </tui-doc-copy>
                 </td>
@@ -114,12 +114,12 @@
                     Taiga UI is a modern UI kit for Angular
                 </td>
                 <td class="td">
-                    <tui-doc-copy (click)="copyCodeExample('.text-h6()')">
+                    <tui-doc-copy [cdkCopyToClipboard]="'.text-h6()'">
                         .text-h6()
                     </tui-doc-copy>
                 </td>
                 <td class="td">
-                    <tui-doc-copy (click)="copyCodeExample('tui-text_h6')">
+                    <tui-doc-copy [cdkCopyToClipboard]="'tui-text_h6'">
                         tui-text_h6
                     </tui-doc-copy>
                 </td>
@@ -132,7 +132,7 @@
 
         <h2 i18n class="tui-text_h3 tui-space_bottom-1">Typesetting</h2>
         <h3 class="tui-text_body-l tui-space_top-0 tui-space_bottom-4">
-            --tui-text-font
+            --tui-font-text
         </h3>
         <table class="table">
             <tr>
@@ -149,15 +149,13 @@
                     Taiga UI reveals all the potential of Angular
                 </td>
                 <td class="td">
-                    <tui-doc-copy
-                        (click)="copyCodeExample('.text-body-xl-bold()')"
-                    >
+                    <tui-doc-copy [cdkCopyToClipboard]="'.text-body-xl-bold()'">
                         .text-body-xl-bold()
                     </tui-doc-copy>
                 </td>
                 <td class="td">
                     <tui-doc-copy
-                        (click)="copyCodeExample('tui-text_body-xl tui-text_bold')"
+                        [cdkCopyToClipboard]="'tui-text_body-xl tui-text_bold'"
                     >
                         tui-text_body-xl tui-text_bold
                     </tui-doc-copy>
@@ -172,12 +170,12 @@
                     Taiga UI reveals all the potential of Angular
                 </td>
                 <td class="td">
-                    <tui-doc-copy (click)="copyCodeExample('.text-body-xl()')">
+                    <tui-doc-copy [cdkCopyToClipboard]="'.text-body-xl()'">
                         .text-body-xl()
                     </tui-doc-copy>
                 </td>
                 <td class="td">
-                    <tui-doc-copy (click)="copyCodeExample('tui-text_body-xl')">
+                    <tui-doc-copy [cdkCopyToClipboard]="'tui-text_body-xl'">
                         tui-text_body-xl
                     </tui-doc-copy>
                 </td>
@@ -191,15 +189,13 @@
                     Taiga UI reveals all the potential of Angular
                 </td>
                 <td class="td">
-                    <tui-doc-copy
-                        (click)="copyCodeExample('.text-body-l-bold()')"
-                    >
+                    <tui-doc-copy [cdkCopyToClipboard]="'.text-body-l-bold()'">
                         .text-body-l-bold()
                     </tui-doc-copy>
                 </td>
                 <td class="td">
                     <tui-doc-copy
-                        (click)="copyCodeExample('tui-text_body-l tui-text_bold')"
+                        [cdkCopyToClipboard]="'tui-text_body-l tui-text_bold'"
                     >
                         tui-text_body-l tui-text_bold
                     </tui-doc-copy>
@@ -214,12 +210,12 @@
                     Taiga UI reveals all the potential of Angular
                 </td>
                 <td class="td">
-                    <tui-doc-copy (click)="copyCodeExample('.text-body-l()')">
+                    <tui-doc-copy [cdkCopyToClipboard]="'.text-body-l()'">
                         .text-body-l()
                     </tui-doc-copy>
                 </td>
                 <td class="td">
-                    <tui-doc-copy (click)="copyCodeExample('tui-text_body-l')">
+                    <tui-doc-copy [cdkCopyToClipboard]="'tui-text_body-l'">
                         tui-text_body-l
                     </tui-doc-copy>
                 </td>
@@ -233,15 +229,13 @@
                     Taiga UI reveals all the potential of Angular
                 </td>
                 <td class="td">
-                    <tui-doc-copy
-                        (click)="copyCodeExample('.text-body-l-bold(2)')"
-                    >
+                    <tui-doc-copy [cdkCopyToClipboard]="'.text-body-l-bold(2)'">
                         .text-body-l-bold(2)
                     </tui-doc-copy>
                 </td>
                 <td class="td">
                     <tui-doc-copy
-                        (click)="copyCodeExample('tui-text_body-l-2 tui-text_bold')"
+                        [cdkCopyToClipboard]="'tui-text_body-l-2 tui-text_bold'"
                     >
                         tui-text_body-l-2 tui-text_bold
                     </tui-doc-copy>
@@ -256,14 +250,12 @@
                     Taiga UI reveals all the potential of Angular
                 </td>
                 <td class="td">
-                    <tui-doc-copy (click)="copyCodeExample('.text-body-l(2)')">
+                    <tui-doc-copy [cdkCopyToClipboard]="'.text-body-l(2)'">
                         .text-body-l(2)
                     </tui-doc-copy>
                 </td>
                 <td class="td">
-                    <tui-doc-copy
-                        (click)="copyCodeExample('tui-text_body-l-2')"
-                    >
+                    <tui-doc-copy [cdkCopyToClipboard]="'tui-text_body-l-2'">
                         tui-text_body-l-2
                     </tui-doc-copy>
                 </td>
@@ -277,15 +269,13 @@
                     Taiga UI reveals all the potential of Angular
                 </td>
                 <td class="td">
-                    <tui-doc-copy
-                        (click)="copyCodeExample('.text-body-l-bold(3)')"
-                    >
+                    <tui-doc-copy [cdkCopyToClipboard]="'.text-body-l-bold(3)'">
                         .text-body-l-bold(3)
                     </tui-doc-copy>
                 </td>
                 <td class="td">
                     <tui-doc-copy
-                        (click)="copyCodeExample('tui-text_body-l-3 tui-text_bold')"
+                        [cdkCopyToClipboard]="'tui-text_body-l-3 tui-text_bold'"
                     >
                         tui-text_body-l-3 tui-text_bold
                     </tui-doc-copy>
@@ -300,14 +290,12 @@
                     Taiga UI reveals all the potential of Angular
                 </td>
                 <td class="td">
-                    <tui-doc-copy (click)="copyCodeExample('.text-body-l(3)')">
+                    <tui-doc-copy [cdkCopyToClipboard]="'.text-body-l(3)'">
                         .text-body-l(3)
                     </tui-doc-copy>
                 </td>
                 <td class="td">
-                    <tui-doc-copy
-                        (click)="copyCodeExample('tui-text_body-l-3')"
-                    >
+                    <tui-doc-copy [cdkCopyToClipboard]="'tui-text_body-l-3'">
                         tui-text_body-l-3
                     </tui-doc-copy>
                 </td>
@@ -321,15 +309,13 @@
                     Taiga UI reveals all the potential of Angular
                 </td>
                 <td class="td">
-                    <tui-doc-copy
-                        (click)="copyCodeExample('.text-body-m-bold()')"
-                    >
+                    <tui-doc-copy [cdkCopyToClipboard]="'.text-body-m-bold()'">
                         .text-body-m-bold()
                     </tui-doc-copy>
                 </td>
                 <td class="td">
                     <tui-doc-copy
-                        (click)="copyCodeExample('tui-text_body-m tui-text_bold')"
+                        [cdkCopyToClipboard]="'tui-text_body-m tui-text_bold'"
                     >
                         tui-text_body-m tui-text_bold
                     </tui-doc-copy>
@@ -344,12 +330,12 @@
                     Taiga UI reveals all the potential of Angular
                 </td>
                 <td class="td">
-                    <tui-doc-copy (click)="copyCodeExample('.text-body-m()')">
+                    <tui-doc-copy [cdkCopyToClipboard]="'.text-body-m()'">
                         .text-body-m()
                     </tui-doc-copy>
                 </td>
                 <td class="td">
-                    <tui-doc-copy (click)="copyCodeExample('tui-text_body-m')">
+                    <tui-doc-copy [cdkCopyToClipboard]="'tui-text_body-m'">
                         tui-text_body-m
                     </tui-doc-copy>
                 </td>
@@ -363,15 +349,13 @@
                     Taiga UI reveals all the potential of Angular
                 </td>
                 <td class="td">
-                    <tui-doc-copy
-                        (click)="copyCodeExample('.text-body-m-bold(2)')"
-                    >
+                    <tui-doc-copy [cdkCopyToClipboard]="'.text-body-m-bold(2)'">
                         .text-body-m-bold(2)
                     </tui-doc-copy>
                 </td>
                 <td class="td">
                     <tui-doc-copy
-                        (click)="copyCodeExample('tui-text-body-m-2 tui-text_bold')"
+                        [cdkCopyToClipboard]="'tui-text-body-m-2 tui-text_bold'"
                     >
                         tui-text-body-m-2 tui-text_bold
                     </tui-doc-copy>
@@ -386,14 +370,12 @@
                     Taiga UI reveals all the potential of Angular
                 </td>
                 <td class="td">
-                    <tui-doc-copy (click)="copyCodeExample('.text-body-m(2)')">
+                    <tui-doc-copy [cdkCopyToClipboard]="'.text-body-m(2)'">
                         .text-body-m(2)
                     </tui-doc-copy>
                 </td>
                 <td class="td">
-                    <tui-doc-copy
-                        (click)="copyCodeExample('tui-text-body-m-2')"
-                    >
+                    <tui-doc-copy [cdkCopyToClipboard]="'tui-text-body-m-2'">
                         tui-text-body-m-2
                     </tui-doc-copy>
                 </td>
@@ -407,15 +389,13 @@
                     Taiga UI reveals all the potential of Angular
                 </td>
                 <td class="td">
-                    <tui-doc-copy
-                        (click)="copyCodeExample('.text-body-s-bold()')"
-                    >
+                    <tui-doc-copy [cdkCopyToClipboard]="'.text-body-s-bold()'">
                         .text-body-s-bold()
                     </tui-doc-copy>
                 </td>
                 <td class="td">
                     <tui-doc-copy
-                        (click)="copyCodeExample('tui-text_body-s tui-text_bold')"
+                        [cdkCopyToClipboard]="'tui-text_body-s tui-text_bold'"
                     >
                         tui-text_body-s tui-text_bold
                     </tui-doc-copy>
@@ -430,12 +410,12 @@
                     Taiga UI reveals all the potential of Angular
                 </td>
                 <td class="td">
-                    <tui-doc-copy (click)="copyCodeExample('.text-body-s()')">
+                    <tui-doc-copy [cdkCopyToClipboard]="'.text-body-s()'">
                         .text-body-s()
                     </tui-doc-copy>
                 </td>
                 <td class="td">
-                    <tui-doc-copy (click)="copyCodeExample('tui-text_body-s')">
+                    <tui-doc-copy [cdkCopyToClipboard]="'tui-text_body-s'">
                         tui-text_body-s
                     </tui-doc-copy>
                 </td>
@@ -449,15 +429,13 @@
                     Taiga UI reveals all the potential of Angular
                 </td>
                 <td class="td">
-                    <tui-doc-copy
-                        (click)="copyCodeExample('.text-body-s-bold(2)')"
-                    >
+                    <tui-doc-copy [cdkCopyToClipboard]="'.text-body-s-bold(2)'">
                         .text-body-s-bold(2)
                     </tui-doc-copy>
                 </td>
                 <td class="td">
                     <tui-doc-copy
-                        (click)="copyCodeExample('tui-text-body-s-bold-2')"
+                        [cdkCopyToClipboard]="'tui-text-body-s-bold-2'"
                     >
                         tui-text-body-s-bold-2
                     </tui-doc-copy>
@@ -472,14 +450,12 @@
                     Taiga UI reveals all the potential of Angular
                 </td>
                 <td class="td">
-                    <tui-doc-copy (click)="copyCodeExample('.text-body-s(2)')">
+                    <tui-doc-copy [cdkCopyToClipboard]="'.text-body-s(2)'">
                         .text-body-s(2)
                     </tui-doc-copy>
                 </td>
                 <td class="td">
-                    <tui-doc-copy
-                        (click)="copyCodeExample('tui-text-body-s-2')"
-                    >
+                    <tui-doc-copy [cdkCopyToClipboard]="'tui-text-body-s-2'">
                         tui-text-body-s-2
                     </tui-doc-copy>
                 </td>
@@ -493,12 +469,12 @@
                     Taiga UI reveals all the potential of Angular
                 </td>
                 <td class="td">
-                    <tui-doc-copy (click)="copyCodeExample('.text-body-xs()')">
+                    <tui-doc-copy [cdkCopyToClipboard]="'.text-body-xs()'">
                         .text-body-xs()
                     </tui-doc-copy>
                 </td>
                 <td class="td">
-                    <tui-doc-copy (click)="copyCodeExample('tui-text_body-xs')">
+                    <tui-doc-copy [cdkCopyToClipboard]="'tui-text_body-xs'">
                         tui-text_body-xs
                     </tui-doc-copy>
                 </td>
@@ -528,14 +504,14 @@
                 </td>
                 <td class="td">
                     <tui-doc-copy
-                        (click)="copyCodeExample('.text-caption-l-bold()')"
+                        [cdkCopyToClipboard]="'.text-caption-l-bold()'"
                     >
                         .text-caption-l-bold()
                     </tui-doc-copy>
                 </td>
                 <td class="td">
                     <tui-doc-copy
-                        (click)="copyCodeExample('tui-text_caption-l tui-text_bold')"
+                        [cdkCopyToClipboard]="'tui-text_caption-l tui-text_bold'"
                     >
                         tui-text_caption-l tui-text_bold
                     </tui-doc-copy>
@@ -553,16 +529,12 @@
                     Taiga UI is a modern UI kit for Angular
                 </td>
                 <td class="td">
-                    <tui-doc-copy
-                        (click)="copyCodeExample('.text-caption-l()')"
-                    >
+                    <tui-doc-copy [cdkCopyToClipboard]="'.text-caption-l()'">
                         .text-caption-l()
                     </tui-doc-copy>
                 </td>
                 <td class="td">
-                    <tui-doc-copy
-                        (click)="copyCodeExample('tui-text_caption-l')"
-                    >
+                    <tui-doc-copy [cdkCopyToClipboard]="'tui-text_caption-l'">
                         tui-text_caption-l
                     </tui-doc-copy>
                 </td>
@@ -579,15 +551,13 @@
                     Taiga UI is a modern UI kit for Angular
                 </td>
                 <td class="td">
-                    <tui-doc-copy
-                        (click)="copyCodeExample('.text-caption-bold()')"
-                    >
+                    <tui-doc-copy [cdkCopyToClipboard]="'.text-caption-bold()'">
                         .text-caption-bold()
                     </tui-doc-copy>
                 </td>
                 <td class="td">
                     <tui-doc-copy
-                        (click)="copyCodeExample('tui-text_caption tui-text_bold')"
+                        [cdkCopyToClipboard]="'tui-text_caption tui-text_bold'"
                     >
                         tui-text_caption tui-text_bold
                     </tui-doc-copy>
@@ -605,12 +575,12 @@
                     Taiga UI is a modern UI kit for Angular
                 </td>
                 <td class="td">
-                    <tui-doc-copy (click)="copyCodeExample('.text-caption()')">
+                    <tui-doc-copy [cdkCopyToClipboard]="'.text-caption()'">
                         .text-caption()
                     </tui-doc-copy>
                 </td>
                 <td class="td">
-                    <tui-doc-copy (click)="copyCodeExample('tui-text_caption')">
+                    <tui-doc-copy [cdkCopyToClipboard]="'tui-text_caption'">
                         tui-text_caption
                     </tui-doc-copy>
                 </td>

@@ -2,13 +2,12 @@
 
 @padding-xs: 8px;
 @padding-s: 12px;
-@padding-m: 16px;
-@padding-l: 24px;
-@padding-xl: 32px;
+@padding-m: 24px;
+@padding-l: 36px;
+@padding-xl: 40px;
 @icon-margin: 8px;
-@font-size-small: 14px;
-@font-size-medium: 15px;
-@font-size-large: 18px;
+@font-size-large: 15px;
+@font-size-extra-large: 17px;
 
 :host {
     .clearbtn();
@@ -17,9 +16,10 @@
     display: inline-block;
     flex-shrink: 0;
     vertical-align: top;
-    border-radius: var(--tui-radius);
+    border-radius: var(--tui-radius-m);
     user-select: none;
     text-decoration: none;
+    font-weight: bold;
     outline: none;
 
     &[disabled] {
@@ -37,7 +37,7 @@
 
     &[data-tui-host-size='xs'] {
         height: var(--tui-height-xs);
-        font-size: @font-size-small;
+        font-weight: normal;
 
         &[data-tui-host-shape='square'],
         &[tuiIconButton] {
@@ -48,7 +48,7 @@
 
     &[data-tui-host-size='s'] {
         height: var(--tui-height-s);
-        font-size: @font-size-medium;
+        font-weight: normal;
 
         &[data-tui-host-shape='square'],
         &[tuiIconButton] {
@@ -59,7 +59,7 @@
 
     &[data-tui-host-size='m'] {
         height: var(--tui-height-m);
-        font-size: @font-size-medium;
+        font-size: @font-size-large;
 
         &[data-tui-host-shape='square'],
         &[tuiIconButton] {
@@ -70,7 +70,7 @@
 
     &[data-tui-host-size='l'] {
         height: var(--tui-height-l);
-        font-size: @font-size-medium;
+        font-size: @font-size-large;
 
         &[data-tui-host-shape='square'],
         &[tuiIconButton] {
@@ -80,13 +80,13 @@
     }
 
     &[data-tui-host-size='xl'] {
-        height: var(--tui-height-xl);
+        height: 60px;
         font-size: @font-size-large;
 
         &[data-tui-host-shape='square'],
         &[tuiIconButton] {
-            height: var(--tui-height-xl);
-            width: var(--tui-height-xl);
+            height: 60px;
+            width: 60px;
         }
     }
 }
@@ -101,7 +101,7 @@
 }
 
 .right {
-    margin: 0 -@icon-margin 0 @icon-margin / 2;
+    margin: 0 -@icon-margin / 2 0 @icon-margin;
 }
 
 .icon {
