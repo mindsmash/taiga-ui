@@ -22,7 +22,13 @@ import {
     TuiIdentityMatcher,
     TuiNativeFocusableElement,
 } from '@taiga-ui/cdk';
-import {TUI_CHECKBOX_APPEARANCE, TuiAppearance, tuiScaleIn, TuiSizeL} from '@taiga-ui/core';
+import {
+    TUI_CHECKBOX_APPEARANCE,
+    TuiAppearance,
+    tuiScaleIn,
+    TuiSizeL,
+    TuiSizeS,
+} from '@taiga-ui/core';
 import {TuiRadioGroupComponent} from '@taiga-ui/kit/components/radio-group';
 
 // @dynamic
@@ -56,7 +62,7 @@ export class TuiRadioComponent<T>
     @Input()
     @HostBinding('attr.data-tui-host-size')
     @tuiDefaultProp()
-    size: TuiSizeL = 'm';
+    size: TuiSizeS | TuiSizeL = 's';
 
     @Input()
     @tuiDefaultProp()

@@ -26,7 +26,7 @@
 }
 
 .content {
-    .text-body-s(2);
+    .text-body-m;
     word-wrap: break-word;
     min-width: 0;
 
@@ -34,12 +34,21 @@
         opacity: var(--tui-disabled-opacity);
     }
 
+    :host[data-tui-host-size='s'] & {
+        .text-body-s();
+        line-height: 16px;
+        margin-left: 8px;
+    }
+
     :host[data-tui-host-size='m'] & {
+        .text-body-m();
+        line-height: 20px;
         margin-left: 8px;
     }
 
     :host[data-tui-host-size='l'] & {
         .text-body-m();
+        line-height: 24px;
         margin-left: 12px;
     }
 }

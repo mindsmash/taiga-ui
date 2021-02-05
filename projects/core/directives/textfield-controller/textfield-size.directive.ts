@@ -18,7 +18,7 @@ export const TUI_TEXTFIELD_SIZE = new InjectionToken<TuiTextfieldSizeDirective>(
 })
 export class TuiTextfieldSizeDirective extends Controller {
     @Input('tuiTextfieldSize')
-    size: TuiSizeS | TuiSizeL = 'l';
+    size: TuiSizeS | TuiSizeL = 'm';
 }
 
 export function sizeDirectiveFactory(): TuiTextfieldSizeDirective {

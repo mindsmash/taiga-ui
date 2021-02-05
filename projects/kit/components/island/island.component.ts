@@ -15,7 +15,7 @@ import {TuiTextAlign} from '@taiga-ui/kit/enums';
 export class TuiIslandComponent {
     @Input()
     @tuiDefaultProp()
-    size: TuiSizeL | TuiSizeS = 'm';
+    size: TuiSizeL | TuiSizeS = 'l';
 
     @Input()
     @tuiDefaultProp()

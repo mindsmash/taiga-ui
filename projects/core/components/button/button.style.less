@@ -2,12 +2,10 @@
 
 @padding-xs: 8px;
 @padding-s: 12px;
-@padding-m: 24px;
-@padding-l: 36px;
-@padding-xl: 40px;
+@padding-m: 16px;
+@padding-l: 20px;
+@padding-xl: 24px;
 @icon-margin: 8px;
-@font-size-large: 15px;
-@font-size-extra-large: 17px;
 
 :host {
     .clearbtn();
@@ -19,7 +17,6 @@
     border-radius: var(--tui-radius-m);
     user-select: none;
     text-decoration: none;
-    font-weight: bold;
     outline: none;
 
     &[disabled] {
@@ -37,7 +34,7 @@
 
     &[data-tui-host-size='xs'] {
         height: var(--tui-height-xs);
-        font-weight: normal;
+        .text-body-s();
 
         &[data-tui-host-shape='square'],
         &[tuiIconButton] {
@@ -48,7 +45,7 @@
 
     &[data-tui-host-size='s'] {
         height: var(--tui-height-s);
-        font-weight: normal;
+        .text-body-m();
 
         &[data-tui-host-shape='square'],
         &[tuiIconButton] {
@@ -59,7 +56,7 @@
 
     &[data-tui-host-size='m'] {
         height: var(--tui-height-m);
-        font-size: @font-size-large;
+        .text-body-m();
 
         &[data-tui-host-shape='square'],
         &[tuiIconButton] {
@@ -70,7 +67,7 @@
 
     &[data-tui-host-size='l'] {
         height: var(--tui-height-l);
-        font-size: @font-size-large;
+        .text-body-m();
 
         &[data-tui-host-shape='square'],
         &[tuiIconButton] {
@@ -80,13 +77,13 @@
     }
 
     &[data-tui-host-size='xl'] {
-        height: 60px;
-        font-size: @font-size-large;
+        height: var(--tui-height-xl);
+        .text-body-l();
 
         &[data-tui-host-shape='square'],
         &[tuiIconButton] {
-            height: 60px;
-            width: 60px;
+            height: var(--tui-height-xl);
+            width: var(--tui-height-xl);
         }
     }
 }

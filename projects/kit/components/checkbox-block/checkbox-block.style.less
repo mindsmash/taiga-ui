@@ -6,6 +6,7 @@
     vertical-align: top;
     border-radius: var(--tui-radius-m);
 
+    &[data-tui-host-size='s'],
     &[data-tui-host-size='m'],
     &[data-tui-host-size='l'] {
         .text-body-m();
@@ -64,63 +65,54 @@
     }
 
     :host[data-tui-host-size='s'] & {
-        padding: 0 16px 0 8px;
-    }
-
-    :host[data-tui-host-size='s'][data-tui-host-align='right'] & {
-        padding: 0 8px 0 16px;
-    }
-
-    :host[data-tui-host-size='s']._hidden_checkbox & {
-        padding: 0 16px;
+        padding: 0 12px;
     }
 
     :host[data-tui-host-size='m'] & {
-        padding: 0 16px 0 12px;
-    }
-
-    :host[data-tui-host-size='m'][data-tui-host-align='right'] & {
-        padding: 0 12px 0 16px;
-    }
-
-    :host[data-tui-host-size='m']._hidden_checkbox & {
-        padding: 0 24px;
-    }
-
-    :host[data-tui-host-size='l'] & {
         padding: 0 16px;
     }
 
-    :host[data-tui-host-size='l']._hidden_checkbox & {
-        padding: 0 36px;
+    :host[data-tui-host-size='l'] & {
+        padding: 0 20px;
     }
 }
 
 .view {
     margin-top: 12px;
-    margin-right: 12px;
+    margin-right: 8px;
     align-self: flex-start;
-
-    :host[data-tui-host-align='right'] & {
-        margin-left: 12px;
-        margin-right: 0;
-    }
 
     :host[data-tui-host-size='s'] & {
         margin-top: 8px;
+        margin-left: -2px;
         margin-right: 8px;
     }
 
     :host[data-tui-host-size='s'][data-tui-host-align='right'] & {
         margin-left: 8px;
+        margin-right: -2px;
     }
 
     :host[data-tui-host-size='m'] & {
-        margin-top: 14px;
+        margin-top: 10px;
+        margin-right: 12px;
+        margin-left: -4px;
+    }
+
+    :host[data-tui-host-size='m'][data-tui-host-align='right'] & {
+        margin-left: 12px;
+        margin-right: -4px;
     }
 
     :host[data-tui-host-size='l'] & {
-        margin-top: 16px;
+        margin-top: 12px;
+        margin-left: -6px;
+        margin-right: 16px;
+    }
+
+    :host[data-tui-host-size='l'][data-tui-host-align='right'] & {
+        margin-left: 16px;
+        margin-right: -6px;
     }
 
     :host._hidden_checkbox & {

@@ -1,13 +1,17 @@
 @import 'taiga-ui-local';
 
-@width-m: 32px;
-@height-m: 16px;
-@width-l: 48px;
+@width-s: 28px;
+@height-s: 16px;
+@width-m: 36px;
+@height-m: 20px;
+@width-l: 44px;
 @height-l: 24px;
-@toggle-width-m: 48px;
+@toggle-width-s: 40px;
+@toggle-interval-s: 12px;
+@toggle-width-m: 52px;
 @toggle-interval-m: 16px;
-@toggle-width-l: 72px;
-@toggle-interval-l: 24px;
+@toggle-width-l: 64px;
+@toggle-interval-l: 20px;
 
 :host {
     position: relative;
@@ -15,6 +19,11 @@
     vertical-align: middle;
     overflow: hidden;
     border-radius: 100px;
+
+    &[data-tui-host-size='s'] {
+        width: @width-s;
+        height: @height-s;
+    }
 
     &[data-tui-host-size='m'] {
         width: @width-m;
@@ -49,6 +58,12 @@
     align-items: center;
     justify-content: center;
 
+    :host[data-tui-host-size='s'] & {
+        width: @toggle-width-s;
+        height: @height-s;
+        transform: translateX(-@toggle-interval-s);
+    }
+
     :host[data-tui-host-size='m'] & {
         width: @toggle-width-m;
         height: @height-m;
@@ -76,14 +91,21 @@
         opacity: 0.24;
     }
 
+    :host[data-tui-host-size='s'] & {
+        width: 10px;
+        height: 10px;
+        margin: 2px -1px;
+    }
+
     :host[data-tui-host-size='m'] & {
-        width: 12px;
-        height: 12px;
+        width: 14px;
+        height: 14px;
     }
 
     :host[data-tui-host-size='l'] & {
-        width: 16px;
-        height: 16px;
+        width: 18px;
+        height: 18px;
+        margin: 2px -1px;
     }
 
     :host._disabled & {
@@ -116,14 +138,19 @@
         color: var(--tui-clear-active);
     }
 
+    :host[data-tui-host-size='s'] & {
+        width: 24px;
+        transform: scale(0.5);
+    }
+
     :host[data-tui-host-size='m'] & {
-        width: 8px;
-        margin: 0 @space;
+        width: 24px;
+        transform: scale(0.58333333);
     }
 
     :host[data-tui-host-size='l'] & {
-        width: 16px;
-        margin: 0 @space + 2;
+        width: 24px;
+        transform: scale(0.5);
     }
 }
 
@@ -154,14 +181,19 @@
         }
     }
 
-    :host[data-tui-host-size='m'] & {
+    :host[data-tui-host-size='s'] & {
         width: 16px;
         height: 16px;
         transform: scale(0.75);
     }
 
+    :host[data-tui-host-size='m'] & {
+        width: 16px;
+        height: 16px;
+        transform: scale(0.875);
+    }
+
     :host[data-tui-host-size='l'] & {
-        margin: 0 @space / 2;
         width: 24px;
         height: 24px;
     }

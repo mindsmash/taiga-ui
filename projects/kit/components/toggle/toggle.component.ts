@@ -25,6 +25,7 @@ import {
     TuiBrightness,
     TuiModeDirective,
     TuiSizeL,
+    TuiSizeS,
     TuiSizeXS,
 } from '@taiga-ui/core';
 
@@ -58,7 +59,7 @@ export class TuiToggleComponent
     @Input()
     @HostBinding('attr.data-tui-host-size')
     @tuiDefaultProp()
-    size: TuiSizeL = 'm';
+    size: TuiSizeS | TuiSizeL = 'm';
 
     @ViewChild('focusableElement')
     private readonly focusableElement?: ElementRef<TuiNativeFocusableElement>;
@@ -90,8 +91,8 @@ export class TuiToggleComponent
             : TuiAppearance.Secondary;
     }
 
-    get sizeM(): boolean {
-        return this.size === 'm';
+    get sizeL(): boolean {
+        return this.size === 'l';
     }
 
     @HostBinding('class._checked')
@@ -100,15 +101,15 @@ export class TuiToggleComponent
     }
 
     get iconOn(): string {
-        return this.sizeM ? 'tuiIconToggleOn' : 'tuiIconToggleOnLarge';
+        return this.sizeL ? 'tuiIconToggleOnLarge' : 'tuiIconToggleOn';
     }
 
     get iconOff(): string {
-        return this.sizeM ? 'tuiIconToggleOff' : 'tuiIconToggleOffLarge';
+        return this.sizeL ? 'tuiIconToggleOffLarge' : 'tuiIconToggleOff';
     }
 
     get loaderSize(): TuiSizeXS {
-        return this.sizeM ? 'xs' : 's';
+        return this.sizeL ? 's' : 'xs';
     }
 
     @HostBinding('attr.data-tui-host-mode')

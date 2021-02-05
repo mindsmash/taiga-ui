@@ -2,7 +2,7 @@
     .text-basic();
     position: relative;
     display: block;
-    border-radius: var(--tui-radius-m);
+    border-radius: var(--tui-radius-s);
 
     &[data-tui-host-size='s'] {
         height: var(--tui-height-s);
@@ -20,7 +20,6 @@
         height: var(--tui-height-l);
         min-height: var(--tui-height-l);
         max-height: var(--tui-height-l);
-        font-size: 15px;
     }
 }
 
@@ -103,7 +102,6 @@
     display: block;
     width: 100%;
     height: 20px;
-    font-size: 13px;
     box-sizing: border-box;
     user-select: none;
     pointer-events: none;
@@ -137,10 +135,6 @@
     :host[data-tui-host-size='m']._focused._label-outside &,
     :host[data-tui-host-size='l']._focused._label-outside & {
         color: var(--tui-text-03);
-    }
-
-    :host[data-tui-host-size='l'] & {
-        font-size: 15px;
     }
 
     :host[data-tui-host-size='m']._focused:not(._label-outside) &,

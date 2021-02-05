@@ -1,6 +1,7 @@
 @import 'taiga-ui-local';
 
-@sizeM: 16px;
+@sizeS: 16px;
+@sizeM: 20px;
 @sizeL: 24px;
 
 :host {
@@ -8,6 +9,11 @@
     position: relative;
     display: block;
     flex-shrink: 0;
+
+    &[data-tui-host-size='s'] {
+        width: @sizeS;
+        height: @sizeS;
+    }
 
     &[data-tui-host-size='m'] {
         width: @sizeM;

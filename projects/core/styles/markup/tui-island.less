@@ -1,5 +1,6 @@
+@padding-small: 8px;
 @padding: 16px;
-@padding-large: 20px;
+@padding-large: 24px;
 
 .tui-island {
     position: relative;
@@ -42,8 +43,8 @@
     }
 
     &_size_s {
-        .text-body-s();
-        padding: @padding;
+        .text-body-m();
+        padding: @padding-small;
     }
 
     &_size_m {
@@ -96,12 +97,12 @@
         margin: 0 0 @space * 2;
 
         .tui-island_size_m & {
-            .text-h6();
+            .text-h5();
             margin: 0 0 @space * 3;
         }
 
         .tui-island_size_l & {
-            .text-h6();
+            .text-h5();
         }
     }
 
@@ -161,14 +162,19 @@
 
     .tui-island &__footer-button {
         display: block;
-        width: ~'calc(100% + 30px);'; // margin compensation
-        margin: @padding -@padding + 1 -@padding + 1; // 1 is compensations of border
+        width: ~'calc(100% + 46px);'; // margin compensation
+        margin: @padding-large -@padding-large + 1 -@padding-large + 1; // 1 is compensations of border
         border-top: 1px solid var(--tui-base-03);
         border-radius: 0 0 var(--tui-radius-l) var(--tui-radius-l);
     }
 
-    .tui-island_size_l &__footer-button {
-        width: ~'calc(100% + 38px);'; // margin compensation
-        margin: @padding-large -@padding-large + 1 -@padding-large + 1; // 1 is compensations of border
+    .tui-island_size_s &__footer-button {
+        width: ~'calc(100% + 14px);'; // margin compensation
+        margin: @padding-small -@padding-small + 1 -@padding-small + 1; // 1 is compensations of border
+    }
+
+    .tui-island_size_m &__footer-button {
+        width: ~'calc(100% + 30px);'; // margin compensation
+        margin: @padding -@padding + 1 -@padding + 1; // 1 is compensations of border
     }
 }

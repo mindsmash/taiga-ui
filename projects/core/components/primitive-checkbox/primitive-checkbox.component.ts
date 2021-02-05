@@ -8,7 +8,7 @@ import {
 import {tuiDefaultProp} from '@taiga-ui/cdk';
 import {TuiAppearance} from '@taiga-ui/core/enums';
 import {TUI_CHECKBOX_APPEARANCE} from '@taiga-ui/core/tokens';
-import {TuiSizeL} from '@taiga-ui/core/types';
+import {TuiSizeL, TuiSizeS} from '@taiga-ui/core/types';
 
 // @dynamic
 @Component({
@@ -21,7 +21,7 @@ export class TuiPrimitiveCheckboxComponent {
     @Input()
     @HostBinding('attr.data-tui-host-size')
     @tuiDefaultProp()
-    size: TuiSizeL = 'm';
+    size: TuiSizeS | TuiSizeL = 'm';
 
     @Input()
     @tuiDefaultProp()

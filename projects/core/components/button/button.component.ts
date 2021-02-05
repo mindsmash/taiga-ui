@@ -74,7 +74,7 @@ export class TuiButtonComponent
     @Input()
     @HostBinding('attr.data-tui-host-size')
     @tuiDefaultProp()
-    size: TuiSizeXS | TuiSizeXL = 'l';
+    size: TuiSizeXS | TuiSizeXL = 'm';
 
     constructor(
         @Inject(ElementRef) private readonly elementRef: ElementRef<HTMLElement>,

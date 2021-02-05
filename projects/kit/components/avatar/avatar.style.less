@@ -1,11 +1,11 @@
 @import 'taiga-ui-local';
 
-@size-xs: 24px;
+@size-xs: 20px;
 @size-s: 32px;
-@size-m: 48px;
+@size-m: 40px;
 @size-l: 64px;
-@size-xl: 96px;
-@size-xxl: 144px;
+@size-xl: 80px;
+@size-xxl: 160px;
 
 :host {
     position: relative;
@@ -22,42 +22,39 @@
     overflow: hidden;
 
     &[data-tui-host-size='xs'] {
-        .text-body-s(2);
+        .text-body-s();
         width: @size-xs;
         height: @size-xs;
     }
 
     &[data-tui-host-size='s'] {
-        .text-body-m(2);
+        .text-body-m();
         width: @size-s;
         height: @size-s;
     }
 
     &[data-tui-host-size='m'] {
-        .text-body-l();
+        .text-body-m();
         width: @size-m;
         height: @size-m;
     }
 
     &[data-tui-host-size='l'] {
-        .text-h5();
+        .text-body-l();
         width: @size-l;
         height: @size-l;
-        border-radius: var(--tui-radius-l);
     }
 
     &[data-tui-host-size='xl'] {
-        .text-h3();
+        .text-body-xl();
         width: @size-xl;
         height: @size-xl;
-        border-radius: var(--tui-radius-l);
     }
 
     &[data-tui-host-size='xxl'] {
-        .text-h1();
+        .text-body-xl();
         width: @size-xxl;
         height: @size-xxl;
-        border-radius: var(--tui-radius-l);
     }
 
     &._has-avatar {
