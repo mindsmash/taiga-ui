@@ -26,7 +26,8 @@
 }
 
 .content {
-    .text-body-m;
+    font: var(--tui-font-text-m);
+    line-height: 16px;
     word-wrap: break-word;
     min-width: 0;
 
@@ -47,7 +48,7 @@
     }
 
     :host[data-tui-host-size='l'] & {
-        .text-body-m();
+        font: var(--tui-font-text-m);
         line-height: 24px;
         margin-left: 12px;
     }

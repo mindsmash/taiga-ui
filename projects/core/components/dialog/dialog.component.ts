@@ -6,7 +6,6 @@ import {TUI_CLOSE_WORD} from '@taiga-ui/core/tokens';
 import {TuiSizeL, TuiSizeS} from '@taiga-ui/core/types';
 import {POLYMORPHEUS_CONTEXT, PolymorpheusContent} from '@tinkoff/ng-polymorpheus';
 import {Observable} from 'rxjs';
-import {filter} from 'rxjs/operators';
 import {TUI_DIALOG_CLOSE_STREAM, TUI_DIALOG_PROVIDERS} from './dialog.providers';
 
 const SMALL_DIALOGS_ANIMATION = {value: '', params: {start: '40px'}};
@@ -34,13 +33,13 @@ export class TuiDialogComponent<O, I> {
         close$: Observable<unknown>,
         @Inject(TUI_CLOSE_WORD) readonly closeWord$: Observable<string>,
     ) {
-        close$.pipe(filter(() => this.context.dismissible)).subscribe(() => {
+        close$.subscribe(() => {
             this.close();
         });
     }
 
     @HostBinding('attr.data-size')
-    get size(): TuiSizeS | TuiSizeL | 'fullscreen' {
+    get size(): TuiSizeS | TuiSizeL | 'fullscreen' | 'page' {
         return this.context.size;
     }
 
@@ -66,7 +65,7 @@ export class TuiDialogComponent<O, I> {
 
     @HostBinding('@tuiSlideInTop')
     get slideInTop(): TuiAnimationOptions {
-        return this.size === 'fullscreen' || this.isMobile
+        return this.size === 'fullscreen' || this.size === 'page' || this.isMobile
             ? FULLSCREEN_DIALOGS_ANIMATION
             : SMALL_DIALOGS_ANIMATION;
     }
